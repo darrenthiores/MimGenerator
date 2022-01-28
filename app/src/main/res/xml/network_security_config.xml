@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+
+    <domain-config cleartextTrafficPermitted="true">
+
+        <domain includeSubdomains="true">api.imgflip.com</domain>
+
+        <pin-set>
+            <pin digest="SHA-256">PIPlMcEvYxPiCjqlMRbPJj7W+yOJQWVn4z3ZLbLp/TA=</pin>
+            <pin digest="SHA-256">l5bIpOoAf+ziMnsM8s8qazz9qPqAGsiScS4CbFBHsV8=</pin>
+        </pin-set>
+
+    </domain-config>
+
+</network-security-config>

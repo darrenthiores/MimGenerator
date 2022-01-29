@@ -5,10 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.darrenthiores.core.model.presenter.Image
 import com.darrenthiores.core.ui.MainAdapter
-import com.darrenthiores.mimgenerator.R
 import com.darrenthiores.mimgenerator.databinding.FragmentMainBinding
 import org.koin.android.ext.android.inject
 
@@ -57,7 +57,10 @@ class MainFragment : Fragment() {
 
     private fun onClick(image: Image){
 
+        val toDetail = MainFragmentDirections.actionMainFragmentToDetailFragment()
+        toDetail.url = image.image
 
+        findNavController().navigate(toDetail)
 
     }
 

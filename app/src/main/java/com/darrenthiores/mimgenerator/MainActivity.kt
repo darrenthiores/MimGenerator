@@ -2,6 +2,7 @@ package com.darrenthiores.mimgenerator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.findNavController
 import com.darrenthiores.mimgenerator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

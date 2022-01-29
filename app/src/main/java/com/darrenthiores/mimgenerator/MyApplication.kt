@@ -5,7 +5,6 @@ import com.darrenthiores.core.di.networkModule
 import com.darrenthiores.core.di.repositoryModule
 import com.darrenthiores.mimgenerator.di.useCaseModule
 import com.darrenthiores.mimgenerator.di.viewModelModule
-import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
@@ -24,7 +23,6 @@ open class MyApplication : Application() {
         startKoin {
 
             androidLogger(Level.NONE)
-            androidContext(this@MyApplication)
             modules(
                 listOf(
                     networkModule,

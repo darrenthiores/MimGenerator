@@ -1,10 +1,10 @@
 package com.darrenthiores.core.domain
 
-import com.darrenthiores.core.data.repository.ImageRepository
+import com.darrenthiores.core.data.repository.IImageRepository
 import com.darrenthiores.core.model.domain.ImageDomain
 import kotlinx.coroutines.flow.Flow
 
-class ImageInteractor(private val imageRepository: ImageRepository) : ImageUseCase {
+class ImageInteractor(private val imageRepository: IImageRepository) : ImageUseCase {
 
     override suspend fun getImages(): Flow<List<ImageDomain>> = imageRepository.getImages()
 
